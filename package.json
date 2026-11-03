@@ -9,5 +9,10 @@
     "preview": "node scripts/server.mjs --dist --port 4173",
     "test": "node --test --test-isolation=none tests/directory.test.js"
   },
-  "engines": { "node": ">=22.0.0" }
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
 }

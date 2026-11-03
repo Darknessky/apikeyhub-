@@ -1,7 +1,10 @@
+import { inject } from '@vercel/analytics';
 import { PROVIDERS, FILTER_GROUPS } from './data.js';
 import { REFERRAL_LINKS } from './config.js';
 import { COLLECTIONS, getResults, facetCount } from './directory.js';
 import { icon, providerMark } from './icons.js';
+
+inject();
 
 const state = { query: '', collection: 'all', sort: 'curated', filters: Object.fromEntries(FILTER_GROUPS.map(g => [g.key, []])) };
 const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
